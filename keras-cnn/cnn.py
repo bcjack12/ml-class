@@ -38,7 +38,7 @@ model = Sequential()
 model.add(Conv2D(32,
     (config.first_layer_conv_width, config.first_layer_conv_height),
     input_shape=(28, 28,1),
-    activation='relu'))
+    activation='relu', padding='same'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Flatten())
 model.add(Dense(config.dense_layer_size, activation='relu'))
